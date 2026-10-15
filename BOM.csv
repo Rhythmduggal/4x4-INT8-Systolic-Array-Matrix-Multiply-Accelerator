@@ -1,0 +1,13 @@
+Ref,Part,Value/Notes,Qty
+U1,RP2040 module (e.g. Raspberry Pi Pico footprint),MCU + USB,1
+U2,MCP4725,12-bit I2C DAC (addr 0x60),1
+U3,INA226,I2C current/power monitor (addr 0x40),1
+U4,MCP6002 (or similar rail-to-rail op-amp),DAC buffer driving shunt + DUT,1
+U5,AP2112K-3.3 (or similar LDO),3V3 rail (skip if using Pico module's 3V3),1
+R1,Shunt resistor,10 ohm 0.1%,1
+R2-R3,I2C pull-ups,4.7k,2
+C1-C6,Decoupling,100 nF + 10 uF bulk,6
+D1,TVS diode (USB),USBLC6-2SC6,1
+J1,USB-C receptacle,only if not using a Pico module,1
+J2,DUT terminals,2-pin screw terminal / header,1
+TP1-TP6,Test points,3V3 / GND / DAC_OUT / VDUT / SDA / SCL,6
